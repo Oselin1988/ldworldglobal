@@ -1,0 +1,30 @@
+# System files
+.DS_Store
+Thumbs.db
+
+# Backup files
+*.bak
+*.backup
+*.old
+
+# Temporary files
+*.tmp
+*.temp
+
+# IDE/Editor files
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# Log files
+*.log
+
+# Environment files
+.env
+.env.local
+
+# Large files (if any)
+*.mp4
+*.avi
+*.mov
