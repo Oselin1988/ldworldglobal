@@ -63,6 +63,29 @@
       background: #1f7a6e;
     }
 
+    /* Logo Section */
+    .logo-section {
+      background: #fff;
+      padding: 40px 0;
+      text-align: center;
+      border-bottom: 1px solid #e8edf2;
+    }
+    .logo-section img {
+      max-width: 200px;
+      height: auto;
+    }
+    .logo-section .logo-text {
+      font-size: 2rem;
+      font-weight: 700;
+      color: #1B3A5C;
+      letter-spacing: 2px;
+    }
+    .logo-section .logo-sub {
+      font-size: 1rem;
+      color: #2A9D8F;
+      font-weight: 300;
+    }
+
     /* Section styling */
     .section {
       padding: 50px 0;
@@ -77,12 +100,6 @@
       color: #1B3A5C;
       margin-bottom: 1.5rem;
       text-align: center;
-    }
-    .section .subtitle {
-      text-align: center;
-      font-size: 1.1rem;
-      color: #5a6b7a;
-      margin-bottom: 2rem;
     }
 
     /* Mission boxes */
@@ -107,6 +124,84 @@
     .mission-box p {
       font-size: 1rem;
       color: #2c3e50;
+    }
+
+    /* About section */
+    .about-wrapper {
+      display: flex;
+      align-items: center;
+      gap: 40px;
+      max-width: 900px;
+      margin: 0 auto;
+      background: #fff;
+      padding: 30px 35px;
+      border-radius: 12px;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+      border-left: 6px solid #2A9D8F;
+      flex-wrap: wrap;
+      justify-content: center;
+    }
+    .about-wrapper img {
+      width: 180px;
+      height: 180px;
+      border-radius: 50%;
+      border: 4px solid #2A9D8F;
+      object-fit: cover;
+      flex-shrink: 0;
+    }
+    .about-text {
+      flex: 1;
+      min-width: 250px;
+    }
+    .about-text p {
+      font-size: 1.05rem;
+      color: #2c3e50;
+      line-height: 1.7;
+      margin-bottom: 12px;
+    }
+    .about-text p:last-child {
+      margin-bottom: 0;
+    }
+
+    /* Publications section */
+    .publications-list {
+      max-width: 850px;
+      margin: 0 auto;
+      text-align: left;
+    }
+    .publication-item {
+      background: #fff;
+      padding: 18px 25px;
+      margin-bottom: 15px;
+      border-radius: 10px;
+      border-left: 4px solid #2A9D8F;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.04);
+      font-size: 0.95rem;
+      line-height: 1.6;
+    }
+    .publication-item .title {
+      font-weight: 600;
+      color: #1B3A5C;
+    }
+    .publication-item .journal {
+      font-style: italic;
+      color: #2c3e50;
+    }
+    .publication-item .year {
+      color: #2A9D8F;
+      font-weight: 600;
+    }
+    .publication-item .doi {
+      display: inline-block;
+      margin-top: 4px;
+      font-size: 0.85rem;
+    }
+    .publication-item .doi a {
+      color: #2A9D8F;
+      text-decoration: none;
+    }
+    .publication-item .doi a:hover {
+      text-decoration: underline;
     }
 
     /* Services grid */
@@ -181,6 +276,17 @@
       font-weight: 300;
       color: #8aaec9;
     }
+    /* ORCID in contact */
+    .orcid-badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+    }
+    .orcid-badge img {
+      width: 18px;
+      height: 18px;
+      vertical-align: middle;
+    }
 
     /* Footer */
     footer {
@@ -198,12 +304,25 @@
     footer a:hover {
       color: #fff;
     }
+    .footer-orcid {
+      display: inline-flex;
+      align-items: center;
+      gap: 5px;
+    }
+    .footer-orcid img {
+      width: 14px;
+      height: 14px;
+      vertical-align: middle;
+    }
 
     /* Responsive */
     @media (max-width: 600px) {
       .hero h1 { font-size: 2.2rem; }
       .hero .tagline { font-size: 1.2rem; }
       .section h2 { font-size: 1.6rem; }
+      .about-wrapper { padding: 20px; }
+      .about-wrapper img { width: 130px; height: 130px; }
+      .contact-info { flex-direction: column; align-items: center; text-align: center; gap: 15px; }
     }
   </style>
 </head>
@@ -219,6 +338,17 @@
   </div>
 </header>
 
+<!-- LOGO SECTION -->
+<section class="logo-section">
+  <div class="container">
+    <img src="logo.jpg" alt="LD WORLD GLOBAL Logo">
+    <div style="margin-top: 10px;">
+      <span class="logo-text">LD WORLD GLOBAL</span><br>
+      <span class="logo-sub">Empowering Scholars Worldwide</span>
+    </div>
+  </div>
+</section>
+
 <!-- MISSION -->
 <section class="section">
   <div class="container">
@@ -231,6 +361,60 @@
       <div class="mission-box">
         <h3>🏛️ For Organisations</h3>
         <p>To empower organisations by providing expert data analysis and research consultancy – turning complex data into actionable insights for evidence‑based policy and business decisions.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ABOUT LINDA WITH PHOTO -->
+<section class="section section-alt">
+  <div class="container">
+    <h2>About Linda Osaghale</h2>
+    <div class="about-wrapper">
+      <img src="original display picture.jpeg" alt="Linda Osaghale">
+      <div class="about-text">
+        <p>Linda Osaghale is a Microbiologist, Bioinformatician, and AI/ML Researcher with a First‑Class Master's degree in Environmental Microbiology from the University of Ibadan, where she was recognized as the Best Graduating Student. She founded <strong>LD WORLD GLOBAL</strong> to empower researchers, students, and organisations to achieve excellence in their academic and research journeys.</p>
+        <p>She has published as first/corresponding author in multiple Scopus‑indexed journals. She is known for her high level of creativity and deep expertise in research, data analytics, and academic mentoring.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- PUBLICATIONS -->
+<section class="section">
+  <div class="container">
+    <h2>Selected Publications</h2>
+    <div class="publications-list">
+      <div class="publication-item">
+        <span class="title">Hybrid deep learning–based rapid broad‑spectrum antimicrobial susceptibility prediction from whole‑genome assemblies</span><br>
+        <span class="journal">Journal of Microbiological Methods</span>, <span class="year">2026</span>
+        <div class="doi">
+          <a href="https://doi.org/10.1016/j.mimet.2026.107597" target="_blank">DOI: 10.1016/j.mimet.2026.107597</a>
+        </div>
+      </div>
+
+      <div class="publication-item">
+        <span class="title">Phylogenomic analysis reveals lineage‑specific AMR–virulence association in <em>Staphylococcus aureus</em></span><br>
+        <span class="journal">Gene Reports</span>, <span class="year">2026</span>
+        <div class="doi">
+          <a href="https://doi.org/10.1016/j.genrep.2026.102557" target="_blank">DOI: 10.1016/j.genrep.2026.102557</a>
+        </div>
+      </div>
+
+      <div class="publication-item">
+        <span class="title">Replication‑guided functional genomic prioritization of regulatory risk variants in Alzheimer's disease</span><br>
+        <span class="journal">Gene Reports</span>, <span class="year">2026</span>
+        <div class="doi">
+          <a href="https://doi.org/10.1016/j.genrep.2026.102551" target="_blank">DOI: 10.1016/j.genrep.2026.102551</a>
+        </div>
+      </div>
+
+      <div class="publication-item">
+        <span class="title">Adaptive and time‑sensitive machine learning framework for precision therapy in nontuberculous <em>Mycobacterium</em> infections</span><br>
+        <span class="journal">European Journal of Medical and Health Research</span>, <span class="year">2025</span>
+        <div class="doi">
+          <a href="https://doi.org/10.59324/ejmhr.2025.3(6).14" target="_blank">DOI: 10.59324/ejmhr.2025.3(6).14</a>
+        </div>
       </div>
     </div>
   </div>
@@ -293,11 +477,11 @@
 <!-- CONTACT -->
 <section id="contact" class="section section-alt">
   <div class="container">
-    <h2>Let’s Work Together</h2>
+    <h2>Let's Work Together</h2>
     <div class="contact-info">
       <div>
         <span class="label">📧 Email</span><br>
-        <a href="mailto:linda@researchacademy.uk">linda@researchacademy.uk</a>
+        <a href="mailto:contact@researchacademy.com">contact@researchacademy.com</a>
       </div>
       <div>
         <span class="label">📱 WhatsApp</span><br>
@@ -305,7 +489,10 @@
       </div>
       <div>
         <span class="label">🔗 ORCID</span><br>
-        <a href="https://orcid.org/0009-0000-3414-2814" target="_blank">orcid.org/0009-0000-3414-2814</a>
+        <a href="https://orcid.org/0009-0000-3414-2814" target="_blank" rel="me noopener noreferrer" class="orcid-badge">
+          <img src="https://orcid.org/sites/default/files/images/orcid_16x16.png" alt="ORCID iD icon">
+          orcid.org/0009-0000-3414-2814
+        </a>
       </div>
     </div>
     <p style="text-align:center; margin-top:20px; font-size:1rem; color:#2c3e50;">
@@ -319,8 +506,11 @@
   <div class="container">
     <p>© 2026 LD WORLD GLOBAL. All rights reserved.</p>
     <p style="margin-top:8px; font-size:0.85rem;">
-      <a href="mailto:linda@researchacademy.uk">Contact</a> &nbsp;·&nbsp;
-      <a href="https://orcid.org/0009-0000-3414-2814" target="_blank">ORCID</a>
+      <a href="mailto:contact@researchacademy.com">Contact</a> &nbsp;·&nbsp;
+      <a href="https://orcid.org/0009-0000-3414-2814" target="_blank" rel="me noopener noreferrer" class="footer-orcid">
+        <img src="https://orcid.org/sites/default/files/images/orcid_16x16.png" alt="ORCID iD icon">
+        ORCID
+      </a>
     </p>
   </div>
 </footer>
