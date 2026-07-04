@@ -1,0 +1,329 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>LD WORLD GLOBAL – Turning Your Every Idea into Reality</title>
+  <style>
+    /* Reset & base */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+    body {
+      font-family: 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+      background: #f4f6f8;
+      color: #2c3e50;
+      line-height: 1.6;
+    }
+    .container {
+      max-width: 1100px;
+      margin: 0 auto;
+      padding: 0 20px;
+    }
+
+    /* Header / Hero */
+    .hero {
+      background: #1B3A5C;
+      color: #fff;
+      padding: 60px 0 40px;
+      text-align: center;
+    }
+    .hero h1 {
+      font-size: 3rem;
+      font-weight: 700;
+      letter-spacing: -0.5px;
+      margin-bottom: 0.5rem;
+    }
+    .hero .tagline {
+      font-size: 1.5rem;
+      font-weight: 300;
+      color: #a0c4e0;
+      margin-bottom: 0.5rem;
+    }
+    .hero .sub-tagline {
+      font-size: 1.2rem;
+      font-weight: 300;
+      color: #d0e4f0;
+    }
+    .hero .cta-button {
+      display: inline-block;
+      margin-top: 30px;
+      padding: 14px 40px;
+      background: #2A9D8F;
+      color: #fff;
+      font-weight: 600;
+      border-radius: 50px;
+      text-decoration: none;
+      font-size: 1.1rem;
+      transition: background 0.2s;
+    }
+    .hero .cta-button:hover {
+      background: #1f7a6e;
+    }
+
+    /* Section styling */
+    .section {
+      padding: 50px 0;
+      background: #fff;
+    }
+    .section-alt {
+      background: #f4f6f8;
+    }
+    .section h2 {
+      font-size: 2rem;
+      font-weight: 700;
+      color: #1B3A5C;
+      margin-bottom: 1.5rem;
+      text-align: center;
+    }
+    .section .subtitle {
+      text-align: center;
+      font-size: 1.1rem;
+      color: #5a6b7a;
+      margin-bottom: 2rem;
+    }
+
+    /* Mission boxes */
+    .mission-boxes {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 30px;
+      justify-content: center;
+    }
+    .mission-box {
+      flex: 1 1 280px;
+      background: #f4f6f8;
+      border-radius: 12px;
+      padding: 25px 30px;
+      border-left: 6px solid #2A9D8F;
+    }
+    .mission-box h3 {
+      color: #1B3A5C;
+      margin-bottom: 10px;
+      font-size: 1.3rem;
+    }
+    .mission-box p {
+      font-size: 1rem;
+      color: #2c3e50;
+    }
+
+    /* Services grid */
+    .services-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 25px;
+      margin-top: 20px;
+    }
+    .service-card {
+      background: #fff;
+      border-radius: 12px;
+      padding: 25px 20px;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+      border-top: 4px solid #2A9D8F;
+      transition: transform 0.2s;
+    }
+    .service-card:hover {
+      transform: translateY(-5px);
+    }
+    .service-card .icon {
+      font-size: 2.2rem;
+      margin-bottom: 10px;
+    }
+    .service-card h4 {
+      font-size: 1.2rem;
+      color: #1B3A5C;
+      margin-bottom: 10px;
+    }
+    .service-card p {
+      font-size: 0.95rem;
+      color: #3d4d5e;
+      line-height: 1.5;
+    }
+
+    /* Value proposition */
+    .value-box {
+      background: #e8edf2;
+      border-radius: 12px;
+      padding: 30px 35px;
+      text-align: center;
+      max-width: 800px;
+      margin: 0 auto;
+      font-size: 1.1rem;
+      color: #1B3A5C;
+      border-left: 6px solid #2A9D8F;
+    }
+
+    /* Contact */
+    .contact-info {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 25px 40px;
+      font-size: 1.1rem;
+      background: #1B3A5C;
+      color: #fff;
+      padding: 40px 20px;
+      border-radius: 12px;
+      margin-top: 20px;
+    }
+    .contact-info a {
+      color: #a0c4e0;
+      text-decoration: none;
+      font-weight: 500;
+    }
+    .contact-info a:hover {
+      color: #fff;
+      text-decoration: underline;
+    }
+    .contact-info .label {
+      font-weight: 300;
+      color: #8aaec9;
+    }
+
+    /* Footer */
+    footer {
+      background: #1B3A5C;
+      color: #8aaec9;
+      text-align: center;
+      padding: 20px 0;
+      border-top: 1px solid #2a4a6a;
+      font-size: 0.9rem;
+    }
+    footer a {
+      color: #a0c4e0;
+      text-decoration: none;
+    }
+    footer a:hover {
+      color: #fff;
+    }
+
+    /* Responsive */
+    @media (max-width: 600px) {
+      .hero h1 { font-size: 2.2rem; }
+      .hero .tagline { font-size: 1.2rem; }
+      .section h2 { font-size: 1.6rem; }
+    }
+  </style>
+</head>
+<body>
+
+<!-- HERO -->
+<header class="hero">
+  <div class="container">
+    <h1>LD WORLD GLOBAL</h1>
+    <p class="tagline">Turning Your Every Idea into Reality</p>
+    <p class="sub-tagline">From Concept to Publication – We Guide You</p>
+    <a href="#contact" class="cta-button">📅 Book a Free Consultation</a>
+  </div>
+</header>
+
+<!-- MISSION -->
+<section class="section">
+  <div class="container">
+    <h2>Our Mission</h2>
+    <div class="mission-boxes">
+      <div class="mission-box">
+        <h3>🎓 For Scholars</h3>
+        <p>To empower researchers and students worldwide by providing expert guidance in academic publishing, thesis writing, and research consultancy – helping them transform their research ideas into impactful, published work.</p>
+      </div>
+      <div class="mission-box">
+        <h3>🏛️ For Organisations</h3>
+        <p>To empower organisations by providing expert data analysis and research consultancy – turning complex data into actionable insights for evidence‑based policy and business decisions.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- VALUE PROPOSITION -->
+<section class="section section-alt">
+  <div class="container">
+    <h2>What We Offer</h2>
+    <div class="value-box">
+      <strong>We combine deep scientific expertise with advanced computational skills</strong> to help you publish in scopus-indexed journals, master your thesis, analyse complex data, and make evidence‑based decisions – so you can focus on what matters most.
+    </div>
+  </div>
+</section>
+
+<!-- SERVICES -->
+<section class="section">
+  <div class="container">
+    <h2>Our Services</h2>
+    <div class="services-grid">
+      <div class="service-card">
+        <div class="icon">📝</div>
+        <h4>High-Impact Publishing</h4>
+        <p>Journal selection, manuscript preparation, peer review support – all aimed at scopus-indexed journals.</p>
+      </div>
+      <div class="service-card">
+        <div class="icon">📚</div>
+        <h4>Thesis &amp; Article Review</h4>
+        <p>Structural editing, statistical validation, proofreading.</p>
+      </div>
+      <div class="service-card">
+        <div class="icon">📊</div>
+        <h4>Data Analytics</h4>
+        <p>Genomic analysis, machine learning, deep learning, statistical modelling.</p>
+      </div>
+      <div class="service-card">
+        <div class="icon">🔬</div>
+        <h4>Research Consultancy</h4>
+        <p>Experimental design, proposals, grants, literature reviews.</p>
+      </div>
+      <div class="service-card">
+        <div class="icon">🧠</div>
+        <h4>Mentoring &amp; Training</h4>
+        <p>Research writing, data analysis, AI/ML workshops, career guidance.</p>
+      </div>
+      <div class="service-card">
+        <div class="icon">📋</div>
+        <h4>Monitoring &amp; Evaluation</h4>
+        <p>Program evaluation, impact assessment, logic models.</p>
+      </div>
+      <div class="service-card">
+        <div class="icon">📄</div>
+        <h4>Policy Briefs &amp; Reports</h4>
+        <p>Evidence‑based briefs, health impact assessments, data‑driven reports.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CONTACT -->
+<section id="contact" class="section section-alt">
+  <div class="container">
+    <h2>Let’s Work Together</h2>
+    <div class="contact-info">
+      <div>
+        <span class="label">📧 Email</span><br>
+        <a href="mailto:linda@researchacademy.uk">linda@researchacademy.uk</a>
+      </div>
+      <div>
+        <span class="label">📱 WhatsApp</span><br>
+        <a href="https://wa.me/2348166745687" target="_blank">+234 816 674 5687</a>
+      </div>
+      <div>
+        <span class="label">🔗 ORCID</span><br>
+        <a href="https://orcid.org/0009-0000-3414-2814" target="_blank">orcid.org/0009-0000-3414-2814</a>
+      </div>
+    </div>
+    <p style="text-align:center; margin-top:20px; font-size:1rem; color:#2c3e50;">
+      <strong>📅 Book your free consultation today – we're here to help.</strong>
+    </p>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <div class="container">
+    <p>© 2026 LD WORLD GLOBAL. All rights reserved.</p>
+    <p style="margin-top:8px; font-size:0.85rem;">
+      <a href="mailto:linda@researchacademy.uk">Contact</a> &nbsp;·&nbsp;
+      <a href="https://orcid.org/0009-0000-3414-2814" target="_blank">ORCID</a>
+    </p>
+  </div>
+</footer>
+
+</body>
+</html>
